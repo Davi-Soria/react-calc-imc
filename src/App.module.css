@@ -1,0 +1,161 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:azure;
+}
+
+header{
+    max-width: 900px;
+    margin: 40px auto;
+    display: flex;
+    align-items: center;
+}
+
+.headerContainer{
+    background-color: rgb(39, 98, 207);
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    width: 50px;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+header span{
+    font-size: 12px;
+    margin-left: 8px;
+    color:rgb(160, 159, 159)
+}
+
+header span a{
+    color: rgb(160, 159, 159);
+    text-decoration: none;
+}
+
+.container{
+    display: flex;
+    max-width: 900px;
+    margin: auto;
+}
+
+.container .leftSide{
+    flex: 1;
+    margin-right: 40px;
+}
+
+.container .leftSide h1 {
+    margin: 0;
+    font-size: 40px;
+    color:#3a4b5c;
+
+}
+
+.container .leftSide p{
+    font-size: 16px;
+    margin-bottom: 40px;
+    color: #6a7d8b;
+}
+
+.container .leftSide input{
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid rgba(150, 163, 171, 0.5);
+    background-color: azure;
+    padding: 10px 2px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    outline: 0;
+    
+}
+
+.container .leftSide input:disabled{
+    opacity: 0.5;
+}
+
+.container .leftSide button{
+    background-color: rgb(39, 98, 207);
+    padding: 10px;
+    font-size: 15px;
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px black;
+    width: 100%;
+    margin-top: 40px;
+    transition: all ease 0.6s;
+}
+
+.container .leftSide button:hover{
+    background-color: rgb(23, 62, 136);
+}
+
+.container .leftSide button:disabled{
+    opacity: 0.5;
+}
+
+.container .rightSide{
+    flex:1;
+    margin-left: 40px;
+    display: flex;
+}
+
+.container .rightSide .grid{
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.container .rightSide .rightBig{
+   flex:1;
+   display:flex;   
+}
+
+.container .rightSide .rightArrow{
+    position: absolute;
+    background-color: rgba(0, 0, 0, .8);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: -35px;
+    margin-top: 145px;
+    transition: all ease .5s ;
+}
+
+.container .rightSide .rightArrow:hover{
+    background-color: rgba(0, 0, 0, 1); ;
+}
+
+@media (max-width: 820px) {
+
+    header{
+        margin:40px
+    }
+    .container{
+        flex-direction: column;
+        padding: 40px;
+        
+    }
+
+    .container .leftSide{
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+
+    .container .rightSide{
+        margin-left: 0;
+        margin-top: 40px;        
+    }
+    .container .rightSide .rightArrow{
+        margin-top: 75px
+    }
+}
+
